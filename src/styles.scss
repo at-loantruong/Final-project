@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../src/assets/scss/base/all";
+// Components and modules
+@import "../src/assets/scss/modules/all";
+// Layout related stylesheets
+@import "../src/assets/scss/layout/all";
+// Page-specific stylesheets
+@import "../src/assets/scss/pages/all";
+@import "../src/assets/scss/state/all";
