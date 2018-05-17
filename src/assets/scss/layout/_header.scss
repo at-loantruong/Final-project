@@ -1,13 +1,33 @@
+.pape-user-header {
+  border-bottom: 3px solid $primary-color;
+}
+.header-top {
+  background: $primary-color;
+}
+.main-nav {
+  background: $white-color;
+}
+.list-user-info {
+  float: right;
+  li {
+    border-left: 1px solid $border-color;
+    display: inline-block;
+    padding: 6px 15px;
+    cursor: pointer;
+    a {
+      color: $white-color ! important;
+    }
+  }
+}
 .main-menu {
   li {
     display: inline-block;
+    line-height: 70px;
     a {
       color: $second-color;
       display: block;
-      font-size: 14px;
-      font-weight: bold;
-      padding: 15px 16px;
-      text-decoration: none;
+      padding: 15px;
+      font-weight: 700;
       text-transform: uppercase;
     }
   }
