@@ -1,27 +1,51 @@
 .input-group {
   position: relative;
   display: table;
-  border-collapse: separate;
+}
+.input-group-btn {
+  width: 1%;
+  vertical-align: middle;
+}
+.form-group {
+  margin-bottom: 20px;
+  label {
+    span {
+      color: $red-color;
+    }
+  }
 }
 .form-control {
-  display: block;
   width: 100%;
-  height: 34px;
   padding: 6px 12px;
   font-size: 14px;
-  color: #555;
-  background-color: #fff;
-  background-image: none;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-  -webkit-transition: border-color ease-in-out .15s , box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s , box-shadow ease-in-out .15s;
+  color: $second-color;
+  background-color: $white-color;
+  border: 1px solid $border-color;
+  @include border-radius(4px);
+  @include box-shadow(inset, 0, 1px, 1px, rgba(0,0,0,.075));
 }
 .input-group-btn {
   position: relative;
-  font-size: 0;
-  white-space: nowrap;
   display: table-cell;
+  left: -1px;
+  .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+.ng-valid.form-control {
+  border: 1px solid $primary-color;
+}
+.ng-valid .form-control, .ng-valid select {
+  border: 1px solid $primary-color;
+}
+.error-msg {
+  display: none;
+}
+.ng-invalid + .error-msg {
+  display: block;
+  color: $red-color;
+}
+.ng-valid .btn-default {
+  background-color: $primary-color;
 }

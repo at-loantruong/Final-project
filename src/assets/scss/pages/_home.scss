@@ -1,69 +1,81 @@
 .box-wrap {
   .container {
     background: $white-color;
-    height: 100vh;
-    padding: 30px 0;
-    @include box-shadow(0px, 1px, 10px, 0px, rgba(0, 0, 0, 0.3));
+    padding: 50px 15px;
   }
 }
-.panel-box {
-  border-width: 1px 1px 2px;
-  border-style: solid;
-  border-color: $border-color;
-  border-bottom: 2px solid $border-color;
-  margin: 0px 0px 30px;
+.info-results {
   ul {
-    margin: 0;
-    padding-right: 15px;
-    padding-left: 15px;
-    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
     li {
-      line-height: 40px;
+      flex: 0 0 50%;
+      max-width: 50%;
+      margin-bottom: 30px;
+      padding: 0 15px;
+      position: relative;
+      .head {
+        background: $second-color;
+        color: $white-color;
+        display: block;
+        padding: 15px 20px;
+        .date {
+          float: right;
+        }
+      }
     }
   }
 }
-.titles {
-  margin-bottom: 15px;
-  border-bottom: 1px solid $border-color;
-  @include border-radius(5px 5px 0px 0px);
-  h4 {
-    border-left: 5px solid $primary-color;
-    color: $second-color;
-    padding: 10px;
-  }
-}
-.box-team-wrap {
-  border-bottom: 1px solid $border-color;
-  .date {
-    text-align: center;
-    color: #000;
-    padding-top: 3px;
-  }
-  .box-team {
-    position: relative;
-    text-align: center;
-    min-height: 40px;
-    color: red;
-    font-size: 16px;
-    border-bottom: 1px solid $border-color;
+.goals-result {
+  padding: 30px 20px;
+  text-align: center;
+  background: $white-color;
+  border: 1px solid $border-color;
+  @include box-shadow(0, 2px, 4px, 0, rgba(0, 0, 0, 0.1));
+  display: flex;
+  justify-content: space-between;
+  a {
+    display: block;
     img {
-      max-width: 50px;
-      max-height: 50px;
+      max-width: 40px;
+      margin-right: 10px;
+      border: 1px solid $border-color;
     }
-    .logo-team-1 {
-      @include set-position(absolute, -10px, auto, auto, 10px);
+  }
+}
+.pre-score {
+  display: inline-block;
+  a {
+    img {
+      max-width: 40px;
+      margin: 0 10px 5px 0;
+      vertical-align: middle;
     }
-    .name-team-1 {
-      @include set-position(absolute, 50%, auto, auto, 75px);
-      transform: translateY(-50%);
-
+  }
+}
+.score-input {
+  p {
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    line-height: 30px;
+    background: $second-color;
+    color: $white-color;
+    margin: 0 auto;
+  }
+  .goals {
+    b {
+      background: $second-color;
+      color: $white-color;
+      padding: 5px 10px;
+      line-height: 35px;
     }
-    .logo-team-2 {
-      @include set-position(absolute, -10px, 10px, auto, auto);
-    }
-    .name-team-2 {
-      @include set-position(absolute, 50%, 75px, auto, auto);
-      transform: translateY(-50%);
-    }
+  }
+}
+.form-submit {
+  button {
+    margin: 0 30px 20px 0;
   }
 }

@@ -1,13 +1,80 @@
 .page-footer {
+  background-image: url(http://trophy.mikado-themes.com/wp-content/uploads/2017/02/footer-background.jpg);
+  display: block;
+  background-color: $second-color;
+  background-position: center center;
+  background-size: cover;
+  font-size: 16px;
   .container {
-    background: $copyright-bg;
+    padding: 75px 15px;
   }
-  .copyright {
+}
+.footer-widget {
+  h4 {
     color: $white-color;
-    padding: 0 15px;
-    p {
-      margin: 0;
-      padding: 20px 0;
+    margin-bottom: 20px;
+  }
+  p {
+    color: $footer-color;
+    margin-bottom: 15px;
+  }
+  .footer-nav {
+    margin: 20px 0 0;
+    padding: 0px;
+    li {
+      line-height: 30px;
+      border-bottom: 1px solid;
+      a {
+        color: $footer-color;
+        &:before {
+          content: "\f105";
+          font-family: FontAwesome;
+          color: $footer-color;
+          margin-right: 5px;
+        }
+      }
     }
+  }
+  .footer-add {
+    margin: 0px;
+    padding: 0px;
+    li {
+      color: $footer-color;
+      margin-bottom: 15px;
+      i {
+        background: $primary-color;
+        display: inline-block;
+        text-align: center;
+        color: $white-color;
+        margin-right: 10px;
+        @include set-square (20px);
+        @include border-radius(3px);
+      }
+    }
+  }
+}
+.footer-bottom {
+  background: $footer-bg;
+  .container {
+    padding: 15px 0;
+    height: 55px;
+  }
+  p {
+    color: $footer-color;
+    a {
+      color: $white-color;
+    }
+  }
+}
+.footer-social {
+  color: $footer-color;
+  a {
+    display: inline-block;
+    background: $second-color;
+    text-align: center;
+    margin-left: 3px;
+    color: $white-color;
+    @include set-square (26px);
+    @include border-radius(3px);
   }
 }

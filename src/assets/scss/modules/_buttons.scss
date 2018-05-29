@@ -1,24 +1,26 @@
-button,
 .btn {
-  text-transform: uppercase;
-  color: $white-color;
-  background: $primary-color;
-  &:hover {
-  	color: $white-color ! important;
-  }
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
 }
-.btn--primary {
-  border: 1px solid $primary-color ! important;
-  color: $primary-color ! important;
-  background-color: $white-color;
-  &:hover {
-    color: $white-color;
-    background-color: $primary-color;
-  }
+.btn-default {
+  color: $white-color;
+  background-color: $primary-color;
+  padding: 10px 30px;
 }
 .btn-primary {
-  color: #fff;
-  font-size: 14px;
-  border-color: #dedede;
-  text-shadow: none;
+  color: $white-color;
+  border-color: $border-color;
+  background: $primary-color;
+  &:hover {
+    opacity: .8;
+  }
 }

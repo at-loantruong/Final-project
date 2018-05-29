@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SoccersService } from '../../../../shared/services/soccer.service';
 
 @Component({
   selector: 'app-user-main-content',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserMainContentComponent implements OnInit {
 
-  constructor() { }
+  soccer: any;
+  //display: boolean = false;
+
+  constructor (private soccersSerivce: SoccersService) {
+
+  }
+
+  getList(): void {
+    this.soccersSerivce.getList().subscribe(data => {
+      this.soccer = data;
+      console.log(data);
+    });
+  }
 
   ngOnInit() {
+    this.getList();
   }
 
 }

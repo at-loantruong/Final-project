@@ -22,7 +22,7 @@
       color: $visit;
     }
     &:hover {
-      color: $hover ! important;   
+      color: $hover ! important;
     }
     &:active {
       color: $active;
@@ -46,4 +46,9 @@
   -moz-transform: scale($scale, $scale);
   -o-transform: scale($scale, $scale);
   transform: scale($scale, $scale);
+}
+@mixin set-square($value) {
+  width: $value;
+  height: $value;
+  line-height: $value;
 }

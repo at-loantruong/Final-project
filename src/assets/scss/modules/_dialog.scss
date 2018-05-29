@@ -1,0 +1,43 @@
+.overlay {
+  z-index: 999;
+  @include set-position(fixed, 0, 0, 0, 0);
+}
+.modal-header {
+  padding: 15px;
+  border-bottom: 1px solid $border-color;
+  background-color: $primary-color;
+  .close {
+    margin-top: -2px;
+    opacity: 0.4;
+  }
+  h4 {
+  color: $white-color;
+  text-transform: uppercase;
+  }
+  button.close {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+  }
+}
+.modal-body {
+  display: inline-block;
+  padding: 20px 15px;
+  width: 100%;
+}
+.dialog {
+  z-index: 1000;
+  margin: 0 auto;
+  min-height: 200px;
+  max-width: 500px;
+  background-color: $white-color;
+  @include set-position(fixed, 20px, 0, auto, 0);
+  box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14), 0 5px 24px 4px rgba(0, 0, 0, 0.12);
+}
+.dialog__close-btn {
+  color: $second-color;
+  background: transparent;
+  font-size: 20px;
+  @include set-position(absolute, 15px, 15px, auto, auto);
+}
