@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, Output, OnChanges, EventEmitter } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { trigger, state, style, animate, transition, useAnimation } from '@angular/animations';
 import { FormBuilder, FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
+import { SoccersService } from '../../../shared/services/soccer.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-login-dialog',
@@ -20,15 +22,21 @@ import { FormBuilder, FormGroup, FormControl, Validators, FormArray } from '@ang
 })
 export class LoginComponent {
   loginForm: any;
+  router: Router;
+
   @Input() closable = true;
   @Input() visible: boolean;
   @Output() visibleChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private soccersService: SoccersService
+  ) {
     this.loginForm = new FormGroup({
-      username: new FormControl('', Validators.required),
+      // username: new FormControl('', Validators.required),
       password: new FormControl('', Validators.required),
-    })
+      email: new FormControl('', [Validators.required, Validators.email])
+    });
   }
 
   close() {
@@ -36,4 +44,13 @@ export class LoginComponent {
     this.visibleChange.emit(this.visible);
   }
 
+  onLogin() {
+    const userInfo = this.loginForm.value;
+    this.soccersService.login('user/login', userInfo).subscribe( data => {
+      localStorage.setItem('access_token', data['token']);
+      this.close();
+    },
+      (err) => { throw err; },
+      () => console.log('success'));
+  }
 }

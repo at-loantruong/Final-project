@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SoccersService } from '../../../shared/services/soccer.service';
 
 @Component({
   selector: 'app-user-header',
@@ -7,7 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserHeaderComponent implements OnInit {
 
-  constructor() { }
+  userInfo: {};
+
+  constructor(
+    private soccersService: SoccersService
+  ) {
+    this.soccersService.userInfoObsever().subscribe(data => {
+      this.userInfo = data;
+      console.log('user', data);
+    });
+  }
 
   ngOnInit() {
   }

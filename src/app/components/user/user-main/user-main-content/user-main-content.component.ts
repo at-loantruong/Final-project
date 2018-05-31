@@ -9,14 +9,13 @@ import { SoccersService } from '../../../../shared/services/soccer.service';
 export class UserMainContentComponent implements OnInit {
 
   soccer: any;
-  //display: boolean = false;
 
   constructor (private soccersSerivce: SoccersService) {
 
   }
 
   getList(): void {
-    this.soccersSerivce.getList().subscribe(data => {
+    this.soccersSerivce.getList('leagues').subscribe(data => {
       this.soccer = data;
       console.log(data);
     });
