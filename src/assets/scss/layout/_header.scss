@@ -1,0 +1,46 @@
+.header-top {
+  background: $primary-color;
+}
+.logo {
+  img {
+    position: relative;
+    bottom: -4px;
+  }
+}
+.main-nav {
+  background: $white-color;
+  border-bottom: 3px solid $primary-color;
+}
+.list-user-info {
+  float: right;
+  li {
+    border-left: 1px solid $border-color;
+    @extend %li-header;
+    a {
+      color: $white-color ! important;
+    }
+  }
+}
+.head-contact-info {
+  li {
+    margin-right: 15px;
+    color: $white-color;
+    @extend %li-header;
+    i {
+      padding: 0 5px;
+    }
+  }
+}
+.main-menu {
+  li {
+    display: inline-block;
+    line-height: 70px;
+    a {
+      color: $second-color;
+      display: block;
+      padding: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+}

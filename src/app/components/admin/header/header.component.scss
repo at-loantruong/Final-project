@@ -1,0 +1,118 @@
+.admin-header {
+  background: #09192A;
+  min-height: 60px;
+  .navbar-brand {
+    color: #fff;
+    width: 260px;
+    text-align: left;
+    height: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 30px;
+    float: left;
+    padding: 15px 15px;
+    font-size: 18px;
+  }
+}
+.form-control {
+  border-radius: 30px;
+  min-width: 220px;
+}
+.navbar-nav {
+  position: relative;
+}
+ul {
+  width: 50%;
+  float: right;
+  text-align: right;
+  li {
+    display: inline-block;
+    .profile-pic {
+      width: 30px;
+      border-radius: 100%;
+      vertical-align: middle;
+    }
+  }
+  .nav-link {
+    padding-left: .75rem;
+    padding-right: .75rem;
+    font-size: 17px;
+    line-height: 60px;
+  }
+}
+.dropdown-menu {
+  z-index: 1000;
+  float: left;
+  min-width: 10rem;
+  padding: 10px 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 5px;
+}
+.dropdown {
+  cursor: pointer;
+
+  &:hover {
+    .dropdown-menu-right {
+      display: block;
+    }
+  }
+}
+.dropdown-menu-right {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  border-color: rgba(120, 130, 140, 0.13);
+  .dropdown-user {
+    padding: 0px;
+    width: 270px;
+    text-align: left;
+    li {
+      display: block;
+      a {
+        padding: 9px 15px;
+        display: block;
+        color: #54667a;
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
+    .dw-user-box {
+      padding: 10px 15px;
+      border-bottom: 1px solid rgba(120, 130, 140, 0.13);
+      .u-img {
+        width: 80px;
+        display: inline-block;
+        vertical-align: top;
+        img {
+          width: 100%;
+        }
+      }
+      .u-text {
+        display: inline-block;
+        padding-left: 10px;
+        h4 {
+          line-height: 22px;
+          font-size: 18px;
+        }
+        p {
+          margin-bottom: 2px;
+          font-size: 14px;
+        }
+        .btn-primary {
+          border-radius: 30px;
+          color: #fff ! important;
+          padding: 5px;
+        }
+      }
+    }
+  }
+}

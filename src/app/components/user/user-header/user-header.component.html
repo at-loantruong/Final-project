@@ -1,3 +1,56 @@
-<p>
-  user-header works!
-</p>
+<div class="pape-user-header">
+  <div class="header-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-6">
+          <ul class="head-contact-info">
+            <li><i class="fa fa-phone-square"></i>+00386 40 000 111</li>
+            <li><i class="fa fa-envelope"></i>themes@webriti.com</li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <ul class="list-user-info">
+            <li><a href="#"><i class="fa fa-user"></i>My account</a></li>
+            <li><a (click)="showDialog = !showDialog"><i class="fa fa-sign-in"></i> Login</a></li>
+            <li><a href="#"><i class="fa fa-user-plus"></i> Register</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-nav">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-3">
+          <div class="logo">
+            <a href="#">
+              <img src="https://keothom.net/assets/images/logo_1502705291.png" height="100px">
+            </a>
+          </div>
+        </div>
+        <div class="col-md-9 col-sm-9">
+          <nav class="main-menu navbar">
+            <ul class="nav navbar-nav pull-right">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Group</a></li>
+              <li><a href="#">Results</a></li>
+              <li><a href="#">Top Scorers</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+  </div>
+</div>
+<div class="section-title" style="background:url(http://html.iwthemes.com/sportscup/run/img/slide/1.jpg);">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Home</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<app-login-dialog [(visible)]="showDialog">
+</app-login-dialog>

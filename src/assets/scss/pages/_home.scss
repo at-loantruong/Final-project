@@ -1,0 +1,90 @@
+.box-wrap {
+  .container {
+    background: $white-color;
+    padding: 50px 15px;
+  }
+}
+.info-results {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    li {
+      flex: 0 0 50%;
+      max-width: 50%;
+      margin-bottom: 30px;
+      padding: 0 15px;
+      position: relative;
+      .head {
+        background: $second-color;
+        color: $white-color;
+        display: block;
+        padding: 15px 20px;
+        .date {
+          float: right;
+        }
+      }
+    }
+  }
+}
+.goals-result {
+  padding: 30px 20px;
+  text-align: center;
+  background: $white-color;
+  border: 1px solid $border-color;
+  @include box-shadow(0, 2px, 4px, 0, rgba(0, 0, 0, 0.1));
+  display: flex;
+  justify-content: space-between;
+  a {
+    display: block;
+    img {
+      max-width: 40px;
+      margin-right: 10px;
+      border: 1px solid $border-color;
+    }
+  }
+}
+.pre-score {
+  display: inline-block;
+  a {
+    img {
+      max-width: 40px;
+      margin: 0 10px 5px 0;
+      vertical-align: middle;
+    }
+  }
+}
+.score-input {
+  p {
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    line-height: 30px;
+    background: $second-color;
+    color: $white-color;
+    margin: 0 auto;
+  }
+  .goals {
+    b {
+      background: $second-color;
+      color: $white-color;
+      padding: 5px 10px;
+      line-height: 35px;
+    }
+  }
+}
+.form-submit {
+  button {
+    margin: 0 30px 20px 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .info-results {
+    ul li{
+      flex: none;
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+}
